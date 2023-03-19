@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import vector from './images/Vector.svg';
 import './ModalOrder.css';
 import { Rootstate } from '../../store/store';

@@ -1,37 +1,30 @@
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { Rootstate } from '../../store/store';
+// import { Rootstate } from '../../store/store';
 import { setActiveUsers } from '../../store/slices/usersSlice';
 import './Signin.css';
 import axios from 'axios';
 
 const SignIn: React.FC = () => {
-	const data = useSelector((state: Rootstate) => state.users.value);
-	const filter = useSelector((state: Rootstate) => state.users.filteredValue);
 	const [email, setEmail] = useState<string>('');
 	const [password, setPassword] = useState<string>('');
-	const [connect, setconnect] = useState<boolean>(false);
 	const dispatch = useDispatch();
+
 	useEffect(() => {
 		dispatch(setActiveUsers({ email: email }));
-	}, [email]);
+	}, [email, dispatch]);
+
 	const logInUser = async () => {
-		console.log(email);
 		try {
 			const userReq = await axios.post(
 				'https://backendepicure.onrender.com/users/create/',
 				{
 					email: email,
 					password: password,
-				},
-				{
-					withCredentials: true,
-					headers: {
-						'Content-Type': 'application/json',
-					},
 				}
 			);
+			console.log('pass');
 			sessionStorage.setItem('data', JSON.stringify(userReq.data));
 			dispatch(setActiveUsers(email));
 			setEmail('');

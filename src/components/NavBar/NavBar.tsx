@@ -3,7 +3,7 @@ import NavBarLeft from './NavBarLeft';
 import NavBarRight from './NavBarRight';
 import './NavBar.css';
 import NavBarMobileMenu from './NavBarMobile/NavBarMobile';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../../assets/NavBarLogo.svg';
 
 const NavBar: React.FC = () => {
@@ -12,7 +12,6 @@ const NavBar: React.FC = () => {
 	let message = 'Welcome Guest';
 
 	if (data.firstName && data.lastName) {
-		const closeButton2 = document.getElementById('logout');
 		message = `Welcome to Epicure, ${data.firstName} ${data.lastName}!`;
 	}
 	return (

@@ -39,7 +39,6 @@ const YourOrderSubmit: React.FC = () => {
 
 	const handleDishClick = () => {
 		setIsModalOpen(true);
-		// navigate('/', { state: isModalOpen, replace: true });
 	};
 
 	const closeModal = () => {
@@ -51,7 +50,7 @@ const YourOrderSubmit: React.FC = () => {
 			sessionStorage.clear();
 			navigate('/');
 		}
-	}, [homepage]);
+	}, [homepage, navigate]);
 
 	return (
 		<div id="your-check-out">

@@ -12,7 +12,7 @@ const ChefOfTheWeek: React.FC = () => {
 	useEffect(() => {
 		const chefs = chefsData.find((chef: IChef) => chef.chefOfTheWeek);
 		setchefoftheweek(chefs);
-	}, []);
+	}, [chefsData]);
 
 	return (
 		<div id="chef-of-the-week">
