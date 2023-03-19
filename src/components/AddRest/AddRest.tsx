@@ -143,8 +143,6 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 					img: img,
 				}),
 				headers: {
-					'Access-Control-Allow-Origin':
-						'https://frontendepicure.onrender.com/',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			})

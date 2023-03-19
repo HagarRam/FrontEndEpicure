@@ -8,10 +8,6 @@ const data = async () => {
 			{
 				mode: 'no-cors',
 				method: 'GET',
-				headers: {
-					'Access-Control-Allow-Origin':
-						'https://frontendepicure.onrender.com/',
-				},
 			}
 		);
 		const data = await response.json();

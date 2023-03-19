@@ -119,8 +119,6 @@ const AddDish: React.FC<IModal> = (props: IModal) => {
 					restId: restId,
 				}),
 				headers: {
-					'Access-Control-Allow-Origin':
-						'https://frontendepicure.onrender.com/',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			})

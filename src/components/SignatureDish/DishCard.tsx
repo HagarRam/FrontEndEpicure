@@ -64,8 +64,6 @@ const DishCard: React.FC<IDishes> = (props: IDishes) => {
 						userId: Types.ObjectId.createFromHexString(_id),
 					}),
 					headers: {
-						'Access-Control-Allow-Origin':
-							'https://frontendepicure.onrender.com/',
 						'Content-type': 'application/json; charset=UTF-8',
 					},
 				}

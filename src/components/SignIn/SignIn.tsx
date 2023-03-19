@@ -28,8 +28,6 @@ const SignIn: React.FC = () => {
 				{
 					withCredentials: true,
 					headers: {
-						'Access-Control-Allow-Origin':
-							'https://frontendepicure.onrender.com/',
 						'Content-Type': 'application/json',
 					},
 				}

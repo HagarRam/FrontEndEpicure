@@ -32,8 +32,6 @@ const SignUp: React.FC = () => {
 					password: password,
 				}),
 				headers: {
-					'Access-Control-Allow-Origin':
-						'https://frontendepicure.onrender.com/',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			})
