@@ -28,7 +28,7 @@ export const userSlice = createSlice({
 	},
 	reducers: {
 		setAllUsers: (state) => {
-			state.value = state.value;
+			state.filteredValue = state.value;
 		},
 		setActiveUsers: (state, action) => {
 			const currentUser = action.payload;
