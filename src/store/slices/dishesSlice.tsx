@@ -3,12 +3,9 @@ import { useState } from 'react';
 import { IDishes } from '../../components/SignatureDish/DishCard';
 const data = async () => {
 	try {
-		const response = await fetch(
-			'https://backendepicure.onrender.com/dishes/',
-			{
-				method: 'GET',
-			}
-		);
+		const response = await fetch('http://backendepicure.onrender.com/dishes/', {
+			method: 'GET',
+		});
 		const data = await response.json();
 		return data;
 	} catch (err) {

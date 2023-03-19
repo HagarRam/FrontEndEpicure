@@ -55,7 +55,7 @@ const DishCard: React.FC<IDishes> = (props: IDishes) => {
 			}
 
 			const response = await fetch(
-				`https://backendepicure.onrender.com/dishes/`,
+				`http://backendepicure.onrender.com/dishes/`,
 				{
 					method: 'DELETE',
 					body: JSON.stringify({
