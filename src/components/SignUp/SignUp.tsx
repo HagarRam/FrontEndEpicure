@@ -23,6 +23,7 @@ const SignUp: React.FC = () => {
 	) => {
 		try {
 			await fetch('https://backendepicure.onrender.com/users/', {
+				mode: 'cors',
 				method: 'POST',
 				body: JSON.stringify({
 					firstName: firstName,
@@ -31,6 +32,8 @@ const SignUp: React.FC = () => {
 					password: password,
 				}),
 				headers: {
+					'Access-Control-Allow-Origin':
+						'https://frontendepicure.onrender.com/',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			})

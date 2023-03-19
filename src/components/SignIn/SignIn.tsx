@@ -24,6 +24,14 @@ const SignIn: React.FC = () => {
 				{
 					email: email,
 					password: password,
+				},
+				{
+					withCredentials: true,
+					headers: {
+						'Access-Control-Allow-Origin':
+							'https://frontendepicure.onrender.com/',
+						'Content-Type': 'application/json',
+					},
 				}
 			);
 			sessionStorage.setItem('data', JSON.stringify(userReq.data));

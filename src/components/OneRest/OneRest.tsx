@@ -54,6 +54,7 @@ const OneRest: React.FC = () => {
 			const response = await fetch(
 				`https://backendepicure.onrender.com/restaurant`,
 				{
+					mode: 'cors',
 					method: 'DELETE',
 					body: JSON.stringify({
 						id: id,
@@ -61,6 +62,8 @@ const OneRest: React.FC = () => {
 						dishID: dishID,
 					}),
 					headers: {
+						'Access-Control-Allow-Origin':
+							'https://frontendepicure.onrender.com/',
 						'Content-type': 'application/json; charset=UTF-8',
 					},
 				}

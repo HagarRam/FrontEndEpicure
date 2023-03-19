@@ -35,12 +35,15 @@ const OneChef: React.FC = () => {
 	const deletechef = async (id: string, _id: string) => {
 		try {
 			const response = await fetch(`https://backendepicure.onrender.com/chef`, {
+				mode: 'cors',
 				method: 'DELETE',
 				body: JSON.stringify({
 					id: id,
 					userId: Types.ObjectId.createFromHexString(_id),
 				}),
 				headers: {
+					'Access-Control-Allow-Origin':
+						'https://frontendepicure.onrender.com/',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			});

@@ -8,7 +8,11 @@ const data = async () => {
 		const response = await fetch(
 			'https://backendepicure.onrender.com/restaurant/',
 			{
+				mode: 'cors',
 				method: 'GET',
+				headers: {
+					'Access-Control-Allow-Origin': 'https://backendepicure.onrender.com/',
+				},
 			}
 		);
 		const data = await response.json();

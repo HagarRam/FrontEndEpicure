@@ -81,6 +81,7 @@ const AddChef: React.FC<IModal> = (props: IModal) => {
 	) => {
 		try {
 			await fetch('https://backendepicure.onrender.com/chef/', {
+				mode: 'cors',
 				method: 'POST',
 				body: JSON.stringify({
 					name: name,
@@ -89,6 +90,8 @@ const AddChef: React.FC<IModal> = (props: IModal) => {
 					userId: Types.ObjectId.createFromHexString(_id),
 				}),
 				headers: {
+					'Access-Control-Allow-Origin':
+						'https://frontendepicure.onrender.com/',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			})

@@ -129,6 +129,7 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 			const objectId = mongoose.Types.ObjectId.createFromHexString(_id);
 
 			await fetch('https://backendepicure.onrender.com/restaurant/', {
+				mode: 'cors',
 				method: 'POST',
 				body: JSON.stringify({
 					userId: objectId, // Use the valid objectId instead of the _id parameter
@@ -142,6 +143,8 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 					img: img,
 				}),
 				headers: {
+					'Access-Control-Allow-Origin':
+						'https://frontendepicure.onrender.com/',
 					'Content-type': 'application/json; charset=UTF-8',
 				},
 			})

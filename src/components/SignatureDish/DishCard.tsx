@@ -57,12 +57,15 @@ const DishCard: React.FC<IDishes> = (props: IDishes) => {
 			const response = await fetch(
 				`https://backendepicure.onrender.com/dishes/`,
 				{
+					mode: 'cors',
 					method: 'DELETE',
 					body: JSON.stringify({
 						id: id,
 						userId: Types.ObjectId.createFromHexString(_id),
 					}),
 					headers: {
+						'Access-Control-Allow-Origin':
+							'https://frontendepicure.onrender.com/',
 						'Content-type': 'application/json; charset=UTF-8',
 					},
 				}

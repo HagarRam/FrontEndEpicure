@@ -4,7 +4,11 @@ import { IChef } from '../../components/ChefPage/ChefPage';
 const data = async () => {
 	try {
 		const response = await fetch('https://backendepicure.onrender.com/chef/', {
+			mode: 'cors',
 			method: 'GET',
+			headers: {
+				'Access-Control-Allow-Origin': 'https://backendepicure.onrender.com/',
+			},
 		});
 		const data = await response.json();
 		return data;
