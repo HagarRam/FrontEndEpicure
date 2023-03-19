@@ -80,7 +80,7 @@ const AddChef: React.FC<IModal> = (props: IModal) => {
 		_id: string
 	) => {
 		try {
-			await fetch('http://backendepicure.onrender.com/chef/', {
+			await fetch('https://backendepicure.onrender.com/chef/', {
 				method: 'POST',
 				body: JSON.stringify({
 					name: name,
