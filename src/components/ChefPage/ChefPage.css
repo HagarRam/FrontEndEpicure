@@ -43,7 +43,7 @@ body {
 	letter-spacing: 2.6700000762939453px;
 	text-align: center;
 }
-.chef-name:hover {
+#chef-card-element .chef-name:hover {
 	height: 98px;
 	margin-top: -100px;
 }

@@ -17,7 +17,7 @@ const ChefOfTheWeek: React.FC = () => {
 	return (
 		<div id="chef-of-the-week">
 			<div id="titlechef">CHEF OF THE WEEK:</div>
-			<div id="information">
+			<div id="chef-data">
 				{chefoftheweek && (
 					<ChefCard
 						description={chefoftheweek.description}
