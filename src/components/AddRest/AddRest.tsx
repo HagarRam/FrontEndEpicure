@@ -129,7 +129,7 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 			const objectId = mongoose.Types.ObjectId.createFromHexString(_id);
 
 			await fetch('https://backendepicure.onrender.com/restaurant/', {
-				mode: 'cors',
+				mode: 'no-cors',
 				method: 'POST',
 				body: JSON.stringify({
 					userId: objectId, // Use the valid objectId instead of the _id parameter

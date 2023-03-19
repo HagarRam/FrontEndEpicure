@@ -11,7 +11,7 @@ export interface IUser {
 const datausers = async () => {
 	try {
 		const response = await fetch('https://backendepicure.onrender.com/users/', {
-			mode: 'cors',
+			mode: 'no-cors',
 			method: 'GET',
 			headers: {
 				'Access-Control-Allow-Origin': 'https://backendepicure.onrender.com/',

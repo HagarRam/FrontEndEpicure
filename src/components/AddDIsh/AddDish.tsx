@@ -107,7 +107,7 @@ const AddDish: React.FC<IModal> = (props: IModal) => {
 			// Use the provided _id to create a valid ObjectId
 			const objectId = mongoose.Types.ObjectId.createFromHexString(_id);
 			await fetch('https://backendepicure.onrender.com/dishes/', {
-				mode: 'cors',
+				mode: 'no-cors',
 				method: 'POST',
 				body: JSON.stringify({
 					userId: objectId, // Use the valid objectId instead of the _id parameter

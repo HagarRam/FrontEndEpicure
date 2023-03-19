@@ -23,7 +23,7 @@ const SignUp: React.FC = () => {
 	) => {
 		try {
 			await fetch('https://backendepicure.onrender.com/users/', {
-				mode: 'cors',
+				mode: 'no-cors',
 				method: 'POST',
 				body: JSON.stringify({
 					firstName: firstName,
