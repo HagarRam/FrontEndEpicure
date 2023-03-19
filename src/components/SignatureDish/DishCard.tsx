@@ -54,16 +54,19 @@ const DishCard: React.FC<IDishes> = (props: IDishes) => {
 				throw new Error('Invalid _id format');
 			}
 
-			const response = await fetch(`http://localhost:8000/dishes/`, {
-				method: 'DELETE',
-				body: JSON.stringify({
-					id: id,
-					userId: Types.ObjectId.createFromHexString(_id),
-				}),
-				headers: {
-					'Content-type': 'application/json; charset=UTF-8',
-				},
-			});
+			const response = await fetch(
+				`https://backendepicure.onrender.com/dishes/`,
+				{
+					method: 'DELETE',
+					body: JSON.stringify({
+						id: id,
+						userId: Types.ObjectId.createFromHexString(_id),
+					}),
+					headers: {
+						'Content-type': 'application/json; charset=UTF-8',
+					},
+				}
+			);
 
 			const data = await response.json();
 

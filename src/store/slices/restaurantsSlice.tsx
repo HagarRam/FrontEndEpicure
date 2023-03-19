@@ -5,9 +5,12 @@ import {
 } from '../../components/RestaurantPage/RestaurantPage';
 const data = async () => {
 	try {
-		const response = await fetch('http://localhost:8000/restaurant/', {
-			method: 'GET',
-		});
+		const response = await fetch(
+			'https://backendepicure.onrender.com/restaurant/',
+			{
+				method: 'GET',
+			}
+		);
 		const data = await response.json();
 		return data;
 	} catch (err) {

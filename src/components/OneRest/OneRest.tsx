@@ -51,17 +51,20 @@ const OneRest: React.FC = () => {
 		dishID: string | undefined
 	) => {
 		try {
-			const response = await fetch(`http://localhost:8000/restaurant`, {
-				method: 'DELETE',
-				body: JSON.stringify({
-					id: id,
-					userId: Types.ObjectId.createFromHexString(_id),
-					dishID: dishID,
-				}),
-				headers: {
-					'Content-type': 'application/json; charset=UTF-8',
-				},
-			});
+			const response = await fetch(
+				`https://backendepicure.onrender.com/restaurant`,
+				{
+					method: 'DELETE',
+					body: JSON.stringify({
+						id: id,
+						userId: Types.ObjectId.createFromHexString(_id),
+						dishID: dishID,
+					}),
+					headers: {
+						'Content-type': 'application/json; charset=UTF-8',
+					},
+				}
+			);
 			const data = await response.json();
 			if (!response.ok) {
 				throw new Error(data.message);

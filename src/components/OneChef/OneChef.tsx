@@ -34,7 +34,7 @@ const OneChef: React.FC = () => {
 
 	const deletechef = async (id: string, _id: string) => {
 		try {
-			const response = await fetch(`http://localhost:8000/chef`, {
+			const response = await fetch(`https://backendepicure.onrender.com/chef`, {
 				method: 'DELETE',
 				body: JSON.stringify({
 					id: id,

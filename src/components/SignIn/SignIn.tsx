@@ -19,10 +19,13 @@ const SignIn: React.FC = () => {
 	const logInUser = async () => {
 		console.log(email);
 		try {
-			const userReq = await axios.post('http://localhost:8000/users/create/', {
-				email: email,
-				password: password,
-			});
+			const userReq = await axios.post(
+				'https://backendepicure.onrender.com/users/create/',
+				{
+					email: email,
+					password: password,
+				}
+			);
 			sessionStorage.setItem('data', JSON.stringify(userReq.data));
 			dispatch(setActiveUsers(email));
 			setEmail('');

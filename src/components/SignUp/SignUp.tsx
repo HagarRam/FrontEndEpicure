@@ -22,7 +22,7 @@ const SignUp: React.FC = () => {
 		password: string
 	) => {
 		try {
-			await fetch('http://localhost:8000/users/', {
+			await fetch('https://backendepicure.onrender.com/users/', {
 				method: 'POST',
 				body: JSON.stringify({
 					firstName: firstName,
