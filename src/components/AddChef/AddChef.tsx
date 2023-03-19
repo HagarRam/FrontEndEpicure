@@ -81,7 +81,6 @@ const AddChef: React.FC<IModal> = (props: IModal) => {
 	) => {
 		try {
 			await fetch('https://backendepicure.onrender.com/chef/', {
-				mode: 'no-cors',
 				method: 'POST',
 				body: JSON.stringify({
 					name: name,

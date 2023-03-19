@@ -54,7 +54,6 @@ const OneRest: React.FC = () => {
 			const response = await fetch(
 				`https://backendepicure.onrender.com/restaurant`,
 				{
-					mode: 'no-cors',
 					method: 'DELETE',
 					body: JSON.stringify({
 						id: id,
