@@ -11,7 +11,8 @@ const data = async () => {
 				mode: 'no-cors',
 				method: 'GET',
 				headers: {
-					'Access-Control-Allow-Origin': 'https://backendepicure.onrender.com/',
+					'Access-Control-Allow-Origin':
+						'https://frontendepicure.onrender.com/',
 				},
 			}
 		);
