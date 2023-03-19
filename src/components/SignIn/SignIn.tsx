@@ -20,7 +20,7 @@ const SignIn: React.FC = () => {
 		console.log(email);
 		try {
 			const userReq = await axios.post(
-				'http://backendepicure.onrender.com/users/create/',
+				'https://backendepicure.onrender.com/users/create/',
 				{
 					email: email,
 					password: password,

@@ -52,7 +52,7 @@ const OneRest: React.FC = () => {
 	) => {
 		try {
 			const response = await fetch(
-				`http://backendepicure.onrender.com/restaurant`,
+				`https://backendepicure.onrender.com/restaurant`,
 				{
 					method: 'DELETE',
 					body: JSON.stringify({
