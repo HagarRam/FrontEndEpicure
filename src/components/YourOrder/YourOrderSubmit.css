@@ -1,0 +1,8 @@
+#your-check-out {
+	width: 385px;
+	height: 630px;
+	margin-top: 50px;
+	background: #ffffff;
+	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25),
+		2px 4px 10px rgba(175, 175, 175, 0.25);
+}

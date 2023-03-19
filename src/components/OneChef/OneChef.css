@@ -1,0 +1,52 @@
+#chef-of-the-page {
+	margin: 2% 0 1% 30%;
+	width: 45%;
+}
+#chef-of-the-page .chef-card-element {
+	position: initial;
+	width: 80%;
+}
+#chef-of-the-page .chef-name {
+	margin-top: 0;
+	position: initial;
+	font-family: 'Helvetica Neue Thin';
+}
+#chef-restaurants {
+	gap: 20px;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	height: 100%;
+	padding: 0% 8%;
+}
+.chef-rest-page {
+	background-color: #f9f4ea;
+}
+.chef-rest-image {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+}
+#delete {
+	width: 95px;
+	padding: 10px;
+	height: 40px;
+	background-color: lavender;
+	border-radius: 12px;
+}
+#delete:hover {
+	background-color: rgb(252, 137, 137);
+}
+@media only screen and (max-width: 690px) {
+	#chef-restaurants {
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+		margin-top: 20px;
+		margin-left: 14%;
+	}
+	#chef-of-the-page {
+		margin: 2% 0 1% 12%;
+		width: 90%;
+	}
+}

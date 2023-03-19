@@ -1,0 +1,46 @@
+#details-container {
+	width: 385px;
+	height: 630px;
+	margin-top: 50px;
+	margin-right: 25px;
+	background: #ffffff;
+	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25),
+		2px 4px 10px rgba(175, 175, 175, 0.25);
+}
+.details-title {
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 24px;
+	letter-spacing: 2.6700000762939453px;
+	text-align: center;
+	margin-top: 25px;
+}
+#payment-title {
+	margin-top: -34px;
+}
+#input-title {
+	color: black;
+}
+#input-container {
+	width: 100%;
+	height: 68px;
+}
+#input-sign-up-information {
+	width: 100%;
+}
+#input-full-Name {
+	all: unset;
+	margin-bottom: 60px;
+	border-bottom: black solid 0.1px;
+	font-size: 16px;
+	width: 100%;
+}
+#payment-details-information {
+	margin-top: 20px;
+}
+
+#details-information {
+	display: flex;
+	flex-direction: column;
+	margin: 22px;
+}

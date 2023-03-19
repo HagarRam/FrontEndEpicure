@@ -1,0 +1,117 @@
+body {
+	width: 100%;
+	height: 100%;
+}
+#allthecards {
+	gap: 10px;
+	width: 100vw;
+	height: 100%;
+	padding: 0% 8%;
+}
+#titlecard {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 40px;
+	letter-spacing: 1.97px;
+	padding: 4% 14%;
+	width: 100%;
+	padding: 4% 28%;
+}
+
+#restaurantCard {
+	justify-content: space-evenly;
+	display: flex;
+	padding-top: 4%;
+	gap: 24px;
+	padding: 4% 14%;
+}
+.rest-card-element {
+	width: 100%;
+	height: 100%;
+	background: #f9f4ea;
+}
+.img-rest {
+	width: 100%;
+	object-fit: contain;
+}
+.rest-name {
+	font-style: normal;
+	width: 100%;
+	font-weight: 600;
+	font-size: 34px;
+	line-height: 47px;
+	letter-spacing: 2.67px;
+	color: #000000;
+	font-family: 'Helvetica Neue Light';
+}
+#chef-name {
+	font-size: 18px;
+	font-weight: 200;
+	margin: 10px 0 10px 0;
+	line-height: 30px;
+	letter-spacing: 1.97px;
+}
+#card-information {
+	margin: 0% 10%;
+	text-align: center;
+	padding: 10px 0 10px 0;
+}
+.stars {
+	width: 50%;
+}
+#restaurant-card {
+	width: 100%;
+	height: 526px;
+}
+
+#all-the-Restaurants-button {
+	font-weight: 400;
+	font-size: 18px;
+	margin-left: 80%;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 690px) {
+	#titlecard {
+		font-size: 10px;
+		padding: 4% 20%;
+	}
+	.rest-card-element {
+		width: 220px;
+	}
+	#allthecard {
+		overflow: scroll;
+		display: flex;
+		gap: 40px;
+		margin-left: 25px;
+	}
+	.stars {
+		display: none;
+	}
+	#card-information {
+		margin: 0% 6%;
+		text-align: start;
+		padding: 0;
+	}
+	.rest-name {
+		font-size: 14px;
+		letter-spacing: 0.67px;
+		height: 20px;
+	}
+	#chef-name {
+		font-size: 10px;
+	}
+	#all-the-Restaurants-button {
+		font-size: 12px;
+		padding-top: 20px;
+		padding-left: 30px;
+		margin-left: 0;
+	}
+	#restaurant-card {
+		padding: 4% 14%;
+	}
+	#restaurantCard {
+		padding: 0;
+	}
+}

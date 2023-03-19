@@ -1,0 +1,17 @@
+#order-details {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0 20%;
+}
+@media only screen and (max-width: 690px) {
+	#order-details {
+		flex-direction: column;
+		margin: 0px 10%;
+	}
+	#details-container {
+		width: 100%;
+	}
+	#your-check-out {
+		width: 100%;
+	}
+}

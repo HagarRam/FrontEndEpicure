@@ -1,0 +1,62 @@
+.order-img {
+	width: 80px;
+	object-fit: cover;
+}
+.dish-order-card-element {
+	display: flex;
+	background-color: #f9f4ea;
+	height: 100px;
+	margin-bottom: 10px;
+}
+#order-information {
+	overflow: scroll;
+	height: 180px;
+}
+#name-container {
+	display: flex;
+	height: 40px;
+}
+
+#counter-dishes {
+	border: 0.571429px solid #979797;
+	border-radius: 5.42857px;
+	color: #de9200;
+	padding: 9px 12px;
+	margin-left: 10px;
+	font-size: 16px;
+}
+.order-name {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 18px;
+	letter-spacing: 1.9700000286102295px;
+	text-align: center;
+	padding: 10px;
+}
+#order-price-container {
+	margin-left: 70px;
+	font-size: 13px;
+	color: #de9200;
+}
+#right-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+#comment-with-price {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#order-comment {
+	margin-left: 50px;
+	margin-top: 10px;
+}
+#price-order-with-icon {
+	display: flex;
+	font-weight: 600;
+	margin-left: 85%;
+}
+.order-comment {
+	margin-left: 50px;
+}

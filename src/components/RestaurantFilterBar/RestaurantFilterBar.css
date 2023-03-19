@@ -1,0 +1,12 @@
+body {
+	width: 100%;
+	height: 100;
+}
+#FilterRestaurant {
+	display: flex;
+	margin: 2% 25%;
+	justify-content: space-evenly;
+}
+#filter-button:active {
+	font-family: 'Helvetica Neue Bold';
+}

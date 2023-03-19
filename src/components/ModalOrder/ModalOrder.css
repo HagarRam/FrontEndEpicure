@@ -1,0 +1,73 @@
+#vector {
+	object-fit: contain;
+	margin-left: 42%;
+	width: 22%;
+	margin-top: 20%;
+}
+.content-modal {
+	height: 600px;
+	margin: auto;
+	width: 400px;
+	background: #f9f4ea;
+}
+#order-recived {
+	font-size: 24px;
+	font-weight: 200;
+	line-height: 26px;
+	letter-spacing: 2.6700000762939453px;
+	text-align: center;
+	margin-top: 31px;
+}
+#your-food {
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 20px;
+	line-height: 18px;
+	letter-spacing: 1.9700000286102295px;
+	text-align: center;
+}
+#time {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 20px;
+	font-size: 16px;
+	font-weight: 200;
+	line-height: 18px;
+	letter-spacing: 1.9700000286102295px;
+	text-align: center;
+}
+#hour {
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 46px;
+	letter-spacing: 1.9700000286102295px;
+	text-align: center;
+}
+#hour-time {
+	padding-top: 20px;
+}
+#price-in-modal {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+}
+#alltheorder {
+	margin-top: 30px;
+}
+#price-conatiner {
+	display: flex;
+	font-weight: 600;
+}
+#price-in-modal .order-name {
+	padding: 0 0 10px 0;
+	font-weight: 200;
+}
+#total-price {
+	margin-left: 3%;
+	margin-top: 30px;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 2.6700000762939453px;
+	text-align: center;
+}

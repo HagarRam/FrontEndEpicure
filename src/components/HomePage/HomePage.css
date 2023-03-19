@@ -1,0 +1,14 @@
+#welcomeMessage {
+	display: flex;
+	justify-content: space-between;
+	width: 30%;
+	margin-top: 15px;
+}
+#logout {
+	color: #aaaaaa;
+	font-weight: bold;
+	/* display: none; */
+}
+#logout:hover {
+	color: black;
+}

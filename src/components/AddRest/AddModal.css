@@ -1,0 +1,77 @@
+#information {
+	padding: 63px 50px;
+	height: 100%;
+	overflow: scroll;
+}
+#selectChef {
+	all: unset;
+	border: solid 2.2px pink;
+}
+#option {
+	background-color: pink;
+	font-family: 'Helvetica Neue Medium';
+}
+
+#render {
+	margin-top: 28px;
+}
+#add-button {
+	color: white;
+	margin-left: 32%;
+	padding: 5%;
+	border-radius: 30px;
+	background-color: black;
+}
+.rest-information {
+	height: 80%;
+}
+.add-information {
+	margin: auto;
+	width: 400px;
+	height: 70%;
+	border-radius: 168px;
+	background: #b6b6b6;
+	border: solid 2.2px pink;
+}
+#information {
+	height: 430px;
+}
+.submit {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #090909;
+	border: none;
+	color: #ffffff;
+	text-align: center;
+	font-size: 28px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+	margin-left: 23%;
+}
+
+.submit span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.submit span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.submit:hover span {
+	padding-right: 25px;
+}
+
+.submit:hover span:after {
+	opacity: 1;
+	right: 0;
+}

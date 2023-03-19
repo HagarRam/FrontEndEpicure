@@ -1,0 +1,21 @@
+body {
+	width: 100%;
+	height: 100;
+}
+#filterchef {
+	display: flex;
+	margin: 2% 25%;
+	justify-content: space-evenly;
+	gap: 26px;
+}
+.filter-button {
+	font-family: 'Helvetica Neue Bold';
+}
+.without-filter-button {
+	font-family: 'Helvetica Neue Thin';
+}
+@media only screen and (max-width: 690px) {
+	#Filterchef {
+		margin: 40px 0 40px 0;
+	}
+}
