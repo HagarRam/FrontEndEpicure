@@ -13,6 +13,7 @@
 	width: 400px;
 	height: 90%;
 	background: #f9f4ea;
+	overflow: scroll;
 }
 
 .content .dish-card-element {
