@@ -10,7 +10,7 @@ export interface IUser {
 
 const datausers = async () => {
 	try {
-		const response = await fetch('https://backendepicure.onrender.com/users/', {
+		const response = await fetch('https://backendepicure.onrender.com/users', {
 			mode: 'no-cors',
 			method: 'GET',
 		});

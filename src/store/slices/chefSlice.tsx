@@ -3,7 +3,7 @@ import { IChef } from '../../components/ChefPage/ChefPage';
 
 const data = async () => {
 	try {
-		const response = await fetch('https://backendepicure.onrender.com/chef/', {
+		const response = await fetch('https://backendepicure.onrender.com/chef', {
 			mode: 'no-cors',
 			method: 'GET',
 		});

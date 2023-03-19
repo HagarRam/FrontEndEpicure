@@ -6,7 +6,7 @@ import {
 const data = async () => {
 	try {
 		const response = await fetch(
-			'https://backendepicure.onrender.com/restaurant/',
+			'https://backendepicure.onrender.com/restaurant',
 			{
 				mode: 'no-cors',
 				method: 'GET',
