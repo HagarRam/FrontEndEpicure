@@ -159,7 +159,6 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 						rating: '',
 					});
 					window.location.reload();
-					// navigate('/');
 				});
 		} catch (err) {
 			alert('please try again');

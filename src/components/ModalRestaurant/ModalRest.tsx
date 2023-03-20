@@ -13,7 +13,6 @@ interface IModal {
 }
 
 const ModalRest: React.FC<IModal> = (props: IModal) => {
-	const data = JSON.parse(sessionStorage.getItem('data') || '{}');
 	const navigate = useNavigate();
 	const dishesData = useSelector((state: Rootstate) => state.dishes.value);
 	const [comment, setComment] = useState<string[]>(['']);
@@ -46,18 +45,22 @@ const ModalRest: React.FC<IModal> = (props: IModal) => {
 		props.closeBag();
 		// You can use the comment state here to send data to the server
 	};
-	const handleNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const value = event.target.value;
-		setNumber(parseInt(value));
-	};
 
+	const isLogIn = (e: any) => {
+		const data = JSON.parse(sessionStorage.getItem('data') || '{}');
+		if (data.email != null) {
+			postInformation(e); // call the postInformation function with the data
+		} else {
+			alert('Please log in'); // display an alert if no data is present
+		}
+	};
 	return (
 		<div className="restaurants-card">
 			<div
 				id="restaurants-card-Modal"
 				className="modal">
 				<div className="content">
-					<form onSubmit={postInformation}>
+					<form onSubmit={isLogIn}>
 						<span
 							id="closeButton"
 							onClick={() => props.closeButton()}
