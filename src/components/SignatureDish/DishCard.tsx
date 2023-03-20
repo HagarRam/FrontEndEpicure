@@ -73,9 +73,8 @@ const DishCard: React.FC<IDishes> = (props: IDishes) => {
 			if (!response.ok) {
 				throw new Error(data.message);
 			}
-
 			dispatch(removeDish(data.data));
-			navigate('/');
+			navigate('/Restaurant');
 		} catch (err) {
 			console.error(err);
 			throw err;
@@ -90,10 +89,9 @@ const DishCard: React.FC<IDishes> = (props: IDishes) => {
 
 	return (
 		<>
-			<div
-				className={dishtitle}
-				onClick={handleDishClick}>
+			<div className={dishtitle}>
 				<img
+					onClick={handleDishClick}
 					className="img-rest"
 					alt="dish"
 					src={img}

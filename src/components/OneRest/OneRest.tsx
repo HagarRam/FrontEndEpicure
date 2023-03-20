@@ -70,7 +70,6 @@ const OneRest: React.FC = () => {
 				throw new Error(data.message);
 			}
 			dispatch(removeRest(data.data));
-			window.location.reload();
 			navigate('/Restaurant');
 		} catch (err) {
 			console.error(err);

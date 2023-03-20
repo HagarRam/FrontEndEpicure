@@ -158,7 +158,6 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 						openHours: '',
 						rating: '',
 					});
-					window.location.reload();
 					navigate('/');
 				});
 		} catch (err) {
