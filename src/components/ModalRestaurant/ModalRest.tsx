@@ -13,6 +13,7 @@ interface IModal {
 }
 
 const ModalRest: React.FC<IModal> = (props: IModal) => {
+	const data = JSON.parse(sessionStorage.getItem('data') || '{}');
 	const navigate = useNavigate();
 	const dishesData = useSelector((state: Rootstate) => state.dishes.value);
 	const [comment, setComment] = useState<string[]>(['']);

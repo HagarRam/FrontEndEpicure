@@ -24,7 +24,6 @@ const SignIn: React.FC = () => {
 					password: password,
 				}
 			);
-			console.log('pass');
 			sessionStorage.setItem('data', JSON.stringify(userReq.data));
 			dispatch(setActiveUsers(email));
 			setEmail('');
