@@ -1,4 +1,4 @@
-import mongoose, { Types } from 'mongoose';
+import mongoose from 'mongoose';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Rootstate } from '../../store/store';
@@ -8,17 +8,6 @@ import './AddModal.css';
 
 interface IModal {
 	closeButton: Function;
-}
-interface Credentials {
-	name: string;
-	address: string[];
-	chef: string;
-	chefId: string;
-	openHours: string[];
-	openDays: string[];
-	dishes: string[];
-	rating: number;
-	img: string;
 }
 
 const AddRest: React.FC<IModal> = (props: IModal) => {
@@ -255,7 +244,7 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 						<div className="rest-information">
 							<div id="information">
 								<select
-									onChange={handleChangeChef}
+									onChange={(e) => handleChangeChef(e)}
 									id="selectChef">
 									<option>SELECT YOUR CHEF'S</option>
 									{chefData.map((chef: IChef) => (
