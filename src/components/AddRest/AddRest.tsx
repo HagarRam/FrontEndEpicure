@@ -10,6 +10,18 @@ interface IModal {
 	closeButton: Function;
 }
 
+interface IAddRest {
+	name: string;
+	address: string[];
+	chef: string;
+	chefId: string;
+	openHours: number[];
+	openDays: number[];
+	dishes: string[];
+	rating: number;
+	img: string;
+}
+
 const AddRest: React.FC<IModal> = (props: IModal) => {
 	const data = JSON.parse(sessionStorage.getItem('data') || '{}');
 	const chefData = useSelector((state: Rootstate) => state.chef.filteredValue);
@@ -110,13 +122,13 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 	const newRest = async (
 		_id: string,
 		name: string,
-		address: string,
+		address: string[],
 		chef: string,
 		chefId: string,
 		img: string,
-		openDays: string,
-		openHours: string,
-		rating: string
+		openDays: number[],
+		openHours: number[],
+		rating: number
 	) => {
 		try {
 			// Check if the provided _id is a valid ObjectId
@@ -163,7 +175,7 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 			console.log(err);
 		}
 	};
-	const handleChangeChef = (e: any) => {
+	const handleChangeChef = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setSelectedChef(e.target.value);
 	};
 	const handSaveRest = async (
@@ -171,7 +183,7 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 		value: any
 	) => {
 		e.preventDefault();
-		const credentials: Record<string, any> = {
+		const credentials: IAddRest = {
 			name: '',
 			address: [],
 			chef: '',
@@ -199,9 +211,6 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 				case 'openDays':
 				case 'openHours':
 					credentials[obj.name] = obj.value.split(',').map(Number);
-					break;
-				default:
-					credentials[obj.name] = obj.value;
 					break;
 			}
 		});

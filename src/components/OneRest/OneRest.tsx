@@ -111,7 +111,7 @@ const OneRest: React.FC = () => {
 						_id={IdNum._id}
 						titleStar={'restautant-page-stars'}
 						titleImg={'rest-image'}
-						key={IdNum.id}
+						key={String(IdNum.id)}
 					/>
 				) : (
 					<p>Restaurant not found</p>

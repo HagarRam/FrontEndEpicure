@@ -23,7 +23,7 @@ const RestaurantCardsPage: React.FC = () => {
 							id={restaurant.id}
 							titleStar={'stars'}
 							titleImg={'img-rest'}
-							key={restaurant.id}
+							key={String(restaurant._id)}
 							_id={restaurant._id}
 						/>
 					);

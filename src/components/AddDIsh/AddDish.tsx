@@ -104,8 +104,8 @@ const AddDish: React.FC<IModal> = (props: IModal) => {
 		img: string,
 		about: string,
 		dishName: string,
-		dishPrice: string,
-		icons: string
+		dishPrice: number,
+		icons: string[]
 	) => {
 		try {
 			// Check if the provided _id is a valid ObjectId
@@ -149,12 +149,13 @@ const AddDish: React.FC<IModal> = (props: IModal) => {
 
 	const handSaveRest = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		const credentials: any = {
+
+		const credentials: Credentials = {
 			id: 0,
 			restId: '',
 			dishName: '',
 			about: '',
-			dishPrice: '',
+			dishPrice: 0,
 			icons: [],
 			img: '',
 		};
@@ -171,9 +172,6 @@ const AddDish: React.FC<IModal> = (props: IModal) => {
 					break;
 				case 'icons':
 					credentials[obj.name] = obj.value.split(',').map(String);
-					break;
-				default:
-					credentials[obj.name] = obj.value;
 					break;
 			}
 		});

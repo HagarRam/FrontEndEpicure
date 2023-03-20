@@ -91,12 +91,14 @@ const DishCard: React.FC<IDishes> = (props: IDishes) => {
 					alt="dish"
 					src={img}
 				/>
-				<span
-					id="closeButton"
-					onClick={(e) => deleteDish({ _id })}
-					className="close">
-					&times;
-				</span>
+				{data._id === '640dae4cd58da0771cc7b736' && (
+					<span
+						id="closeButton"
+						onClick={(e) => deleteDish({ _id })}
+						className="close">
+						&times;
+					</span>
+				)}
 				<div id={title}>
 					<div className="dish-name">{name}</div>
 					<div className="dishTypes">

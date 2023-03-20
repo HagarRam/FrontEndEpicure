@@ -119,7 +119,7 @@ const OneChef: React.FC = () => {
 								id={restData.id}
 								titleStar={'restautant-page-stars'}
 								titleImg={'chef-rest-image'}
-								key={restData.id}
+								key={String(restData.id)}
 								_id={restData._id}
 							/>
 						));
