@@ -8,7 +8,15 @@ import { IDishes } from '../SignatureDish/DishCard';
 interface IModal {
 	closeButton: Function;
 }
-
+interface Credentials {
+	id: number;
+	restId: string;
+	dishName: string;
+	about: string;
+	dishPrice: number;
+	icons: string[];
+	img: string;
+}
 const AddDish: React.FC<IModal> = (props: IModal) => {
 	const data = JSON.parse(sessionStorage.getItem('data') || '{}');
 	const navigate = useNavigate();
@@ -132,7 +140,6 @@ const AddDish: React.FC<IModal> = (props: IModal) => {
 						img: '',
 					});
 					window.location.reload();
-					// navigate('/Restaurant');
 				});
 		} catch (err) {
 			alert('please try again');
@@ -140,9 +147,7 @@ const AddDish: React.FC<IModal> = (props: IModal) => {
 		}
 	};
 
-	const handSaveRest = async (
-		e: React.FormEvent<HTMLFormElement>
-	): Promise<void> => {
+	const handSaveRest = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		const credentials: any = {
 			id: 0,
@@ -154,7 +159,7 @@ const AddDish: React.FC<IModal> = (props: IModal) => {
 			img: '',
 		};
 		const inputObj = e.target;
-		Object.values(inputObj).forEach((obj: any) => {
+		Object.values(inputObj).forEach((obj: HTMLInputElement) => {
 			switch (obj.name) {
 				case 'dishPrice':
 					credentials[obj.name] = Number(obj.value);

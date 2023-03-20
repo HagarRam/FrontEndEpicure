@@ -9,6 +9,17 @@ import './AddModal.css';
 interface IModal {
 	closeButton: Function;
 }
+interface Credentials {
+	name: string;
+	address: string[];
+	chef: string;
+	chefId: string;
+	openHours: string[];
+	openDays: string[];
+	dishes: string[];
+	rating: number;
+	img: string;
+}
 
 const AddRest: React.FC<IModal> = (props: IModal) => {
 	const data = JSON.parse(sessionStorage.getItem('data') || '{}');
@@ -88,7 +99,7 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 	];
 
 	const renderInputs = (inputFields: InputField[]) => {
-		return inputFields.map((field) => (
+		return inputFields.map((field: InputField) => (
 			<div
 				id="input-container"
 				key={field.id}>
@@ -166,10 +177,12 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 	const handleChangeChef = (e: any) => {
 		setSelectedChef(e.target.value);
 	};
-	const handSaveRest = async (e: any, value: any) => {
+	const handSaveRest = async (
+		e: React.FormEvent<HTMLFormElement>,
+		value: any
+	) => {
 		e.preventDefault();
-		const credentials: any = {
-			id: 0,
+		const credentials: Record<string, any> = {
 			name: '',
 			address: [],
 			chef: '',
@@ -181,7 +194,7 @@ const AddRest: React.FC<IModal> = (props: IModal) => {
 			img: '',
 		};
 		const inputObj = e.target;
-		Object.values(inputObj).forEach((obj: any) => {
+		Object.values(inputObj).forEach((obj: HTMLInputElement) => {
 			switch (obj.name) {
 				case 'rating':
 					credentials[obj.name] = Number(obj.value);

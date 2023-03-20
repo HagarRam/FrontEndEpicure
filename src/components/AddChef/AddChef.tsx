@@ -97,7 +97,6 @@ const AddChef: React.FC<IModal> = (props: IModal) => {
 					setChefs((newChef: IChef[]) => [...newChef, data]);
 					setInputValues({ name: '', description: '', img: '' });
 					window.location.reload();
-					// navigate('/');
 				});
 		} catch (err) {
 			alert('please try again');
@@ -105,7 +104,6 @@ const AddChef: React.FC<IModal> = (props: IModal) => {
 		}
 	};
 
-	const navigate = useNavigate();
 	const handSaveRest = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		const credentials: Record<string, string> = {

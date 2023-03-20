@@ -39,19 +39,6 @@ const SignIn: React.FC = () => {
 	const handleRegister = async () => {
 		await logInUser();
 	};
-	const add = () => {
-		const id = {
-			_id: '640dae4cd58da0771cc7b736',
-			firstName: 'yuval',
-			lastName: 'weiss',
-			email: 'yuval@gmail.com',
-			password: '$2b$10$gqymgX/oTZMT.hmPZh4NvuRhw0O6ZvxB/0pjDfN/bu.9kj/lxjaJu',
-			__v: 0,
-			token:
-				'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQwZGFlNGNkNThkYTA3NzFjYzdiNzM2IiwiZW1haWwiOiJ5dXZhbEBnbWFpbC5jb20iLCJpYXQiOjE2Nzg2MTgxODksImV4cCI6MTY3ODYyNTM4OX0.DDuNCB1tU4h9amu1795OlLjgnXsHHq-Qc9eAFHhrz70',
-		};
-		sessionStorage.setItem('data', JSON.stringify(id));
-	};
 	const navigate = useNavigate();
 	return (
 		<div id="sign-in-page">
@@ -95,12 +82,6 @@ const SignIn: React.FC = () => {
 						id="sign-up-button"
 						onClick={() => navigate('/SignUp')}>
 						SIGN UP
-					</button>
-					<button
-						id="add"
-						onClick={add}>
-						{' '}
-						add
 					</button>
 				</div>
 			</div>
