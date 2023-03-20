@@ -131,7 +131,8 @@ const AddDish: React.FC<IModal> = (props: IModal) => {
 						icons: '',
 						img: '',
 					});
-					navigate('/Restaurant');
+					window.location.reload();
+					// navigate('/Restaurant');
 				});
 		} catch (err) {
 			alert('please try again');
