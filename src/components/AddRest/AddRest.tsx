@@ -1,7 +1,6 @@
 import mongoose, { Types } from 'mongoose';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { Rootstate } from '../../store/store';
 import { IChef } from '../ChefPage/ChefPage';
 import { IRestaurants } from '../RestaurantPage/RestaurantPage';
@@ -13,7 +12,6 @@ interface IModal {
 
 const AddRest: React.FC<IModal> = (props: IModal) => {
 	const data = JSON.parse(sessionStorage.getItem('data') || '{}');
-	const navigate = useNavigate();
 	const chefData = useSelector((state: Rootstate) => state.chef.filteredValue);
 	const restData = useSelector(
 		(state: Rootstate) => state.restaurants.filteredValue

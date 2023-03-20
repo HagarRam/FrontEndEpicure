@@ -67,12 +67,7 @@ const DishCard: React.FC<IDishes> = (props: IDishes) => {
 					},
 				}
 			);
-
 			const data = await response.json();
-
-			if (!response.ok) {
-				throw new Error(data.message);
-			}
 			dispatch(removeDish(data.data));
 			navigate('/Restaurant');
 		} catch (err) {
