@@ -29,7 +29,7 @@ const SignIn: React.FC = () => {
 			dispatch(setActiveUsers(email));
 			setEmail('');
 			setPassword('');
-			navigate('/');
+			// navigate('/');
 		} catch (error: any) {
 			alert(error.response.data);
 			return [];
